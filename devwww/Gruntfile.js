@@ -14,13 +14,13 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   // Load grunt tasks automatically
-  // require('load-grunt-tasks')(grunt)
-  require('jit-grunt')(grunt);
+  require('load-grunt-tasks')(grunt)
+  // require('jit-grunt')(grunt);
 
   // Configurable paths
   var config = {
     dev: '.',
-    prod: '../www/'
+    prod: '../www'
   };
 
   grunt.initConfig({
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
       },
       dev: {
         files: {
-          '<%= config.dev %>/css/stlye.css': '<%= config.dev %>/sass/style.scss'
+          '<%= config.dev %>/css/style.css': '<%= config.dev %>/sass/style.scss'
         }
       }
     },
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
     // additional tasks can operate on them
     useminPrepare: {
       options: {
-        dest:' <%= config.prod %>' 
+        dest: '<%= config.prod %>' 
       },
       html: '<%= config.dev %>/index.html'
     },
