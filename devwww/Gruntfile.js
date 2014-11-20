@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     // Project settings
     config: config,
 
-    wath {
+    watch: {
       options: {
         livereload: true
       },
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: '<%= config.dev %>/sass/{,*/}*.scss',
-        tasks: ['sass', 'autoprefixer']
+        tasks: ['sass']
       },
       livereload: {
         livereload: true,
